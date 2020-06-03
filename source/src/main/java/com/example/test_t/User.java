@@ -6,17 +6,17 @@ import org.springframework.data.annotation.Id;
 
 @Document(collection = "mycollection")
 public class User {
-
+	
     @Id
-    private String id;
+    private String mid;
     private String firstName;
 
-    @PartitionKey
+    @PartitionKey   
     private String lastName;
     private String address;
 
     public User(String id, String firstName, String lastName, String address) {
-        this.id = id;
+        this.mid = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
@@ -26,11 +26,11 @@ public class User {
     }
 
     public String getId() {
-        return id;
+        return mid;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setId(String mid) {
+        this.mid = mid;
     }
 
     public String getFirstName() {
